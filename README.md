@@ -26,7 +26,7 @@ def read_csv_and_parse_three_images(image_steer,file_name,folder,path_split=True
         print(counter)
     return image_steer
 ```
-![Alt text](images/left-right-cam?raw=true "histogram")
+![Alt text](images/left-right-cam.png?raw=true "histogram")
 
 In total there were around 45 K examples in my training set. I also recorded 2 laps for validation and two laps for testing purpose. 
 
@@ -102,8 +102,9 @@ def random_trans(image, steer, trans_range):
 
 
 # H1 The Neural Network Architecture:
-The neural network architecture we used was similar to [Nvidia’s model] (https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/). We added a dropout layer to meet the requirement of this project. One thing we noticed during our trial is that any neural network which is deep enough( 10 layers, with 4 convolution layers at least) is good enough.  We found that the most important factor is the training data.  Below is my model architecture:
+The neural network architecture we used was similar to [Nvidia’s model] (https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/). We added a dropout layer to meet the requirement of this project. One thing we noticed during our trial is that any neural network which is deep enough( 10 layers, with 4 convolution layers at least) is good enough.  We found that the most important factor is the training data. Below is my model:
 ![Model](images/model.png?raw=true "Neural network")
+
 The input to the model is a three channel color image in the RGB format of 64 x 64 input size. The initial image is cropped to remove horizon and resized to 64X64 pixels.
 ![Cropped image](images/cropped-final.png?raw=true "Cropped image")
 
