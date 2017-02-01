@@ -30,11 +30,11 @@ def read_csv_and_parse_three_images(image_steer,file_name,folder,path_split=True
 
 In total there were around 45 K examples in my training set. I also recorded 2 laps for validation and two laps for testing purpose. 
 
-#Input processing
-Using the image/steering directly for training is not a got idea due to skewness in data. Also generalization to different data set is difficult
+#Data processing
+Using the image/steering directly for training is not a got idea due to skewness in data. Also generalization to different data set is not possible with limited set of input data. Data processing helps us to create artificial data.
 
 ### The Zero bias problem
-While driving the simulator, we noticed that the steering angle from -0.25 to 0.25 occurs too often. Below the histogram of steering with a bin width of 0.1. This will cause the car to favor angles from -025 to 0.25 and prevent the car from taking steep turns.  Below is the histogram
+While driving the simulator, we noticed that the steering angle from -0.25 to 0.25 occurs too often. Below the histogram of steering with a bin width of 0.1. This will cause the car to favor angles from -025 to 0.25 and prevent the car from taking steep turns. 
 ![Histogram](images/orginal_hist_all_data.png?raw=true "histogram")
  
 To fix this, we need to select training data that favors higher steering angle over lower steering. We were not able to perform this operation for the whole data set at one go due to memory limitation. We used Python generator and did the following to set one sample from the training batch .
