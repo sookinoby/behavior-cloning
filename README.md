@@ -102,10 +102,10 @@ def random_trans(image, steer, trans_range):
 
 
 # H1 The Neural Network Architecture:
-The neural network architecture we used was similar to Nvidia’s model (https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/). We added a dropout layer to meet the requirement of this project. One thing we noticed during our trial is that any neural network which is deep enough( 10 layers, with 4 convolution layers at least) is good enough.  We found that the most important factor is the training data.  Below is my model architecture:
-![Model](images/ model.png?raw=true "Neural network")
+The neural network architecture we used was similar to [Nvidia’s model] (https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/). We added a dropout layer to meet the requirement of this project. One thing we noticed during our trial is that any neural network which is deep enough( 10 layers, with 4 convolution layers at least) is good enough.  We found that the most important factor is the training data.  Below is my model architecture:
+![Model](images/model.png?raw=true "Neural network")
 The input to the model is a three channel color image in the RGB format of 64 x 64 input size. The initial image is cropped to remove horizon and resized to 64X64 pixels.
-![Cropped image](images/ cropped-final.png?raw=true "Cropped image")
+![Cropped image](images/cropped-final.png?raw=true "Cropped image")
 
  I have used a Lamba layer to scale the input pixel range to (-1 to 1) range. This will help the optimizer to converge faster.  The convolution layers are of varying depth and filter size (3X3) and (5x5) were used. We have used stride length of 2 for all convolution layer expect one. I have used ELU as my activation layer and used a dropout layer to avoid overfitting that will help to generalize. Since this is regression problem we used “mean squared error” as loss function. I used Adam optimizer with the default setting. We trained the network for 10 epochs. We made sure that at least 20,000 samples are used as a training set in each epoch.  
 
