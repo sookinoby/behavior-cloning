@@ -118,8 +118,9 @@ The only thing that helped my model was the data augmentation method translation
 
 The model performed quite well on the second track as well, except for steep turns. Adding an extra convolution layer for automatically choosing the color representation mode as suggested by [Vivek Yadav]( https://chatbotslife.com/learning-human-driving-behavior-using-nvidias-neural-network-model-and-image-augmentation-80399360efee#.vjrzdttix) post and augmenting for brightness will solve those issues. Thanks to all the udacian for providing great ideas in the forum and blogs.
 
-[![Output](images/youtube.png?raw=true)](http://www.youtube.com/watch?v=V8RESU3HhSU)
 The output for the first track is 
+[![Output](images/youtube.png?raw=true)](http://www.youtube.com/watch?v=V8RESU3HhSU)
+
 
 # Future work:
 1. Understand why augmententing images is better than recovery data.
