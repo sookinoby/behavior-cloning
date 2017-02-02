@@ -116,4 +116,9 @@ When I used 40 K samples with a lot of recovery data and correcting the bias of 
 
 The only thing that helped my model was the data augmentation method translation. So I retrained my model with only Udacity’s data with translation and correcting for zero bias. It worked. I used the same data augmentation technique for different architecture and activation functions, everything worked. I still don’t understand why translation is more powerful than any recovery data. Actually, adding recovery data degrades the quality of the model. 
 
-The model performed quite well on the second track as well, except for steep turns. Adding an extra convolution layer as suggested by [Vivek Yadav]( https://chatbotslife.com/learning-human-driving-behavior-using-nvidias-neural-network-model-and-image-augmentation-80399360efee#.vjrzdttix) post and augmenting for brightness will solve those issues.
+The model performed quite well on the second track as well, except for steep turns. Adding an extra convolution layer for automatically choosing the color representation mode as suggested by [Vivek Yadav]( https://chatbotslife.com/learning-human-driving-behavior-using-nvidias-neural-network-model-and-image-augmentation-80399360efee#.vjrzdttix) post and augmenting for brightness will solve those issues. Thanks to all the udacian for providing great ideas in the forum and blogs.
+
+The output for the first track is 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=V8RESU3HhSU
+" target="_blank"><img src="http://img.youtube.com/vi/V8RESU3HhSU/0.jpg" 
+alt="Output result" width="240" height="180" border="10" /></a>
