@@ -122,3 +122,8 @@ The output for the first track is
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=V8RESU3HhSU
 " target="_blank"><img src="http://img.youtube.com/vi/V8RESU3HhSU/0.jpg" 
 alt="Output result" width="240" height="180" border="10" /></a>
+
+# Future work:
+1. Understand why augmententing images is better than recovery data.
+1. Fix issue with track 2 by augmenting the images.
+3. Use recurrent neural network for driving car.
